@@ -26,23 +26,20 @@ Este repositóri tem por objetivo alocar informações sobre os cursos realizado
 <td>Cursando</td>
 <td>2018</td>
 <td><a href="https://www.datascienceacademy.com.br/pages/curso-python-fundamentos-para-analise-de-dados">PythonFundamentos</a></td>
-<td><a href="https://github.com/ThiagoPanini/DataScienceAcademy/tree/master/PythonFundamentos">PortfólioPythonFundamentos</a></td>
 </tr>
 
 <tr>
 <td>Introdução à Ciência de Dados 2.0</td>
-<td>Finalizado (<a href="https://github.com/ThiagoPanini/DataScienceAcademy/blob/master/Introducao-a-Ciencia-de-Dados/certificate-introducao-a-ciencia-de-dados-20.pdf">Certificado</a>)</td>
+<td>Finalizado (<a href="https://github.com/ThiagoPanini/data-science-courses/blob/master/data-science-academy/introducao-ciencia-de-dados/certificate-introducao-a-ciencia-de-dados-20.pdf">Certificado</a>)</td>
 <td>2018</td>
 <td><a href="https://www.datascienceacademy.com.br/course?courseid=introduo--cincia-de-dados">IntroCienciaDados</a></td>
-<td><a href="https://github.com/ThiagoPanini/DataScienceAcademy/tree/master/Introducao-a-Ciencia-de-Dados">PortfólioIntroCiencia</a></td>
 </tr>
 
 <tr>
 <td>Big Data Fundamentos 2.0</td>
-<td>Finalizado (<a href="https://github.com/ThiagoPanini/DataScienceAcademy/blob/master/Big-Data-Fundamentos/certificate-big-data-fundamentos-20.pdf">Certificado</a>)</td>
+<td>Finalizado (<a href="https://github.com/ThiagoPanini/data-science-courses/blob/master/data-science-academy/big-data-fundamentos/certificate-big-data-fundamentos-20.pdf">Certificado</a>)</td>
 <td>2018</td>
 <td><a href="https://www.datascienceacademy.com.br/course?courseid=big-data-fundamentos">BigDataFundamentos</a></td>
-<td><a href="https://github.com/ThiagoPanini/DataScienceAcademy/tree/master/Big-Data-Fundamentos">PortfólioBigData</a></td>
 </tr>
 
 </table>
