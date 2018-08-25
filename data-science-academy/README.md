@@ -18,7 +18,6 @@ Este repositóri tem por objetivo alocar informações sobre os cursos realizado
 <th>Status</th>
 <th>Ano</th>
 <th>Link de Acesso</th>
-<th>Portfólio de Arquivos</th>
 </tr>
 
 <tr>
