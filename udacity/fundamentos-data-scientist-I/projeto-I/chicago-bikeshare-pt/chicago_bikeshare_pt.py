@@ -134,6 +134,15 @@ input("Aperte Enter para continuar...")
 # TODO: Crie uma função para contar os gêneros. Retorne uma lista.
 # Isso deveria retornar uma lista com [count_male, count_female] (exemplo: [10, 15] significa 10 Masculinos, 15 Femininos)
 def count_gender(data_list):
+    """
+    Cria uma lista com a quantidade de pessoas do gênero masculino e do gênero feminino
+    
+    Argumentos:
+    data_list -- Dataset no qual deseja-se extrair os dados de gênero (list)
+    
+    Retorno:
+    [male, female] -- Lista cujos elementos são números inteiros que representam a quantidade de pessoas do gênero masc (index[0]) e feminino (index[1]) (list)
+    """
     male = 0
     female = 0    
     gender_column_data = column_to_list(data_list, 6)    
@@ -159,6 +168,15 @@ input("Aperte Enter para continuar...")
 # TODO: Crie uma função que pegue o gênero mais popular, e retorne este gênero como uma string.
 # Esperamos ver "Masculino", "Feminino", ou "Igual" como resposta.
 def most_popular_gender(data_list):
+    """
+    Função que analisa o gênero mais popular presente em um determinado dataset
+    
+    Argumentos:
+    data_list -- Dataset no qual deseja-se extrair os dados de gênero (list)
+    
+    Retorno:
+    String -- Reposta em formato de string contendo o gênero mais popular presente no data_set.
+    """
     male = 0
     female = 0   
     gender_column_data = column_to_list(data_list, 6)    
@@ -205,6 +223,15 @@ input("Aperte Enter para continuar...")
 print("\nTAREFA 7: Verifique o gráfico!")
 
 def count_user_types(data_list):
+    """
+    Cria uma lista com a quantidade de pessoas cujo tipo pode ser caracterizado entre 'Costumer' e 'Subscriber'
+    
+    Argumentos:
+    data_list -- Dataset no qual deseja-se extrair os dados de gênero (list)
+    
+    Retorno:
+    [male, female] -- Lista cujos elementos são números inteiros que contabilizam o tipo de usuário (list)
+    """
     costumer = subscriber = 0
     
     user_types_data = column_to_list(data_list, 5)
@@ -236,7 +263,7 @@ male, female = count_gender(data_list)
 print("\nTAREFA 8: Por que a condição a seguir é Falsa?")
 print("male + female == len(data_list):", male + female == len(data_list))
 answer = "A condição acima é falsa pois, na base de dados fornecida, há também entradas cujo gênero não foi especificado, ou seja, além de gêneros masculinos\
-e femininos, há valores vazios que devem ser contabilizados, dentro da lista de gêneros, por 'lista_generos.count('')'"
+ e femininos, há valores vazios que devem ser contabilizados, dentro da lista de gêneros, por 'lista_generos.count('')'"
 print("resposta:", answer)
 
 # ------------ NÃO MUDE NENHUM CÓDIGO AQUI ------------
@@ -274,7 +301,7 @@ input("Aperte Enter para continuar...")
 # TAREFA 10
 # Gênero é fácil porque nós temos apenas algumas opções. E quanto a start_stations? Quantas opções ele tem?
 # TODO: Verifique quantos tipos de start_stations nós temos, usando set()
-user_types = set()
+user_types = set(column_to_list(data_list, 3))
 
 print("\nTAREFA 10: Imprimindo as start stations:")
 print(len(user_types))
@@ -304,13 +331,27 @@ input("Aperte Enter para continuar...")
 # TODO: Crie uma função para contar tipos de usuários, sem definir os tipos
 # para que nós possamos usar essa função com outra categoria de dados.
 print("Você vai encarar o desafio? (yes ou no)")
-answer = "no"
+answer = "yes"
 
 def count_items(column_list):
+    """
+    Retorna duas listas, sendo a primeira com elementos únicos de determinada coluna de um data_set e, a segunda, com a contagem de cada um destes atributos'
+    
+    Argumentos:
+    column_list -- lista contendo todas as aparições de determinado atributo em um dataset (list)
+    
+    Retorno:
+    item_types -- lista com elementos únicos filtrados da lista column_list (list)
+    count_items -- lista cujos índices apresentam a contagem de aparições de cada elemento único dentro da lista column_list (list)
+    """
     item_types = []
     count_items = []
+    for item in column_list:
+      if item not in item_types:
+        item_types.append(item)
+    for item in item_types:
+        count_items.append(column_list.count(item))
     return item_types, count_items
-
 
 if answer == "yes":
     # ------------ NÃO MUDE NENHUM CÓDIGO AQUI ------------
