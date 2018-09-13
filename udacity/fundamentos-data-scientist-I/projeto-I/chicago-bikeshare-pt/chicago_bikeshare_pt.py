@@ -181,15 +181,11 @@ def most_popular_gender(data_list):
     female = 0   
     gender_column_data = column_to_list(data_list, 6)    
     
-    for gender in gender_column_data:
-        if gender == 'Male':
-            male += 1
-        elif gender == 'Female':
-            female += 1
+    gender = count_gender(data_list)
     
-    if male > female:
+    if gender[0] > gender[1]:
         answer = 'Masculino'
-    elif female > male:
+    elif gender[1] > gender[0]:
         answer = 'Feminino'
     else:
         answer = 'Igual'
@@ -280,12 +276,24 @@ min_trip = 0.
 max_trip = 0.
 mean_trip = 0.
 median_trip = 0.
+soma_trip = 0.
 
-min_trip = min(int(i) for i in trip_duration_list)
-max_trip = max(int(i) for i in trip_duration_list)
-mean_trip = (sum(int(i) for i in trip_duration_list)) / len(trip_duration_list)
-median_trip = statistics.median(int(i) for i in trip_duration_list)
+trip_flutu = []
 
+for i in range(len(trip_duration_list)):
+	trip_flutu.append(float(trip_duration_list[i]))
+	if i == 0:
+		min_trip = max_trip = trip_flutu[i]
+	else:
+		if trip_flutu[i] > max_trip:
+			max_trip = trip_flutu[i]
+		if trip_flutu[i] < min_trip:
+			min_trip = trip_flutu[i]
+	soma_trip += trip_flutu[i]
+
+mean_trip = soma_trip / len(trip_duration_list)
+sorteada = sorted(trip_flutu)
+median_trip = sorteada[round((len(sorteada)+1)/2)]
 
 print("\nTAREFA 9: Imprimindo o mínimo, máximo, média, e mediana")
 print("Min: ", min_trip, "Max: ", max_trip, "Média: ", mean_trip, "Mediana: ", median_trip)
